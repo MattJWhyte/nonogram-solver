@@ -18,6 +18,6 @@ for line in lines:
         buffer.append(blocks)
 col_blocks = buffer
 
-b = Board(len(lines), row_blocks, col_blocks)
+b = Board(len(row_blocks), row_blocks, col_blocks)
 
-b.solve(False)
+b.solve(True)
