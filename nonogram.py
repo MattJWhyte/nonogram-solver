@@ -1,5 +1,4 @@
 
-
 # Returns all the possible locations of a block of given length in a set space
 # Example:
 #   block = 2, space = 4
@@ -193,21 +192,3 @@ class Board:
         for i in range(self.length):
             column.append(self.board[i][index])
         return column
-
-
-# Open textfile and separate out row and column numbers
-f = open("data.txt", "r")
-lines = f.readlines()
-buffer = []
-row_blocks = []
-for line in lines:
-    if line == "columns\n" or line == "rows\n":
-        row_blocks = buffer
-        buffer = []
-    else:
-        comp = line.split(",")
-        blocks = []
-        for c in comp:
-            blocks.append(int(c))
-        buffer.append(blocks)
-col_blocks = buffer
